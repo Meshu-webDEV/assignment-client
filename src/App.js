@@ -30,7 +30,6 @@ function App() {
         const { data } = await backendAPI.get("/users/me");
         setUsername(data.username);
         setAuthenticated(true);
-        console.log(data);
       } catch (error) {
         console.log("error: ", error);
         setUsername("");

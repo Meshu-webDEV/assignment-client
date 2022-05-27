@@ -33,7 +33,6 @@ const Join = ({
     try {
       delete data["confirm-password"];
       const response = await backendAPI.post("/users/signin", data);
-      console.log("finish awaiting");
       setUsername(response.data.username);
       setAuthenticated(true);
     } catch (error) {
